@@ -1,0 +1,708 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*HEADER*/
+
+.Header{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  background-color: #000;
+  justify-content: space-between;
+  position:static;
+  height: 60px;
+}
+
+.Header-Left{
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  /* margin: 10px; */
+}
+
+.Header-Logo img{
+  width: 3rem;
+  height: 3rem;
+}
+
+/* .Header-Logo img:hover{
+  background-image: url(Logo\ aja.png);
+  width: 50px;
+  height: 50px;
+} */
+
+.Header-Page{
+  width: 100%;
+  display: flex;
+}
+
+.Header-Link{
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  display: block;
+  font-size: 15px;
+}
+
+.Header-PageItem-drpdw{
+  display: inline-block;
+  position: static;
+  height: 50px;
+}
+
+.Header-PageItem-drpdw a{
+  border-bottom: 2px;
+  padding-bottom: 0.5rem;
+}
+
+.Header-Link:after{
+  bottom: -15px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: relative;
+  background:#ff4655 ;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.Header-Link:hover:after { 
+width: 100%; 
+left: 0; 
+}
+
+@media screen and (max-height: 300px) {
+  .Header-Link{
+    margin-top: 40px;
+  }
+}
+
+.header-page-drpdw{
+  display: none;
+  background-color:black ;
+  min-width: 160px;
+  top: 55px;
+  left: 162px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
+  z-index: 1;
+  overflow-x: auto;
+  position: absolute;
+}
+
+.header-page-drpdw a{
+  color: aliceblue;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.header-page-drpdw a:hover{
+  background-color:grey;
+  opacity: 75%;
+  color: white;
+}
+
+.Header-PageItem-drpdw:hover .header-page-drpdw{
+  display: block;
+  animation: dropdown 200ms ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes dropdown {
+  from{
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.Header-Right{
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 0 ;
+
+}
+.Header-Right img{
+  color: white;
+  width: 55px;
+  height: 40px;
+  padding: 8px;
+  /* margin: 10px; */
+}
+
+.Header-Button{
+  background-color: red;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+}
+
+.Header-Button a{
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.right-dropdown{
+  cursor: pointer;
+  /* position: relative;
+  display: inline-block; */
+}
+
+.dropdown-item{
+  display: none;
+  background-color:white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
+  z-index: 1;
+  overflow-x: auto;
+  height: 300px;
+  position: absolute;
+  padding: 8px 0 8px 8px;
+  height: 200px;
+}
+
+.dropdown-menu{
+  color:grey;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+  text-decoration: none;
+}
+
+.Header-Button:hover{
+  /* background-color:white; */
+  opacity: 80%;
+}
+
+.dropdown-menu:hover{
+  color: #000;
+}
+
+.right-dropdown:hover .dropdown-item{
+  right: 110px;
+  top: 52px;
+  display: block;
+  animation: dropdown 300ms ease-in-out;
+  transform-origin:top center;
+}
+
+@keyframes dropdown {
+  from{
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/*HEADER*/
+
+/* CONTENT */
+.Content{
+  background-color: #312c24 ;
+}
+
+.judul{
+  font-size: 25rem;
+  font-family: DINNextw1G,arial,georgia,sans-serif;
+}
+
+.video-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text-video h1{
+  font-family: DINNextw1G,arial,georgia,sans-serif;
+  color: white;
+  font-size: 27px;
+  opacity: 80%;
+  padding-bottom: 3rem;
+}
+
+.header-video img{
+  width: 75rem;
+  height: 25rem;
+}
+
+.header-video{ /*gambar header */
+  /* background-image: url(assets/banner.webp); */
+  display: flex;
+  width:100%;
+  height: 100vh;
+  /* padding: 4rem; */
+  justify-content: center;
+  align-items: center;
+}
+
+.header-video video{
+  /* object-position: center bottom;
+  object-position: 46% center; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  /* object-position: center; */
+}
+
+video{
+  object-fit: contain;
+}
+
+.judul-header{
+  font-family: valorant ;
+  color: #ffffff;
+  font-size: 120px;
+  position: absolute;
+  z-index: 2;
+  padding-bottom: 10px;
+}
+
+.welcome-button {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.header-welcome-button{
+  padding-top: 7rem;
+}
+
+.welcome-button::after {
+  content: '';
+  position: absolute;
+  left: -11px;
+  top: -10px;
+  width: calc(100% + 20px);
+  height: calc(50% + 5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.welcome-button::before {
+  content: '';
+  position: absolute;
+  left: -11px;
+  bottom: -10px;
+  width: calc(100% + 20px);
+  height: calc(50% + 5px);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.welcome-button div {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  padding: 15px 0;
+  background: #ff4655;
+}
+
+.welcome-button div::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #0f1923;
+  transition: 0.4s;
+}
+
+.welcome-button:hover div::after {
+  background: #ece8e1;
+}
+
+.welcome-button div span {
+  position: absolute;
+  width: 120%;
+  height: 110%;
+  transform: translate(-100%, -20px);
+  background: #0f1923;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+  transition: 0.4s;
+}
+
+.welcome-button:hover div span {
+  transform: translate(-10%, -20px);
+}
+
+.welcome-button div a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 80px;
+}
+
+.Content{
+  display: flex;
+  flex-direction: column;
+} 
+
+.Content-Logo{
+  align-items: center;
+  text-align: center;
+  max-width: 75%;
+}
+
+.Content-Logo img{
+  width: 18rem;
+  height: 18rem;
+}
+
+.content1{
+  width: 100%;
+  height: 600px; 
+  background-color: #312c24 ;
+  display: flex;
+  padding: 4rem;
+  margin-top: -100px;
+  justify-content: space-between;
+  background-position: center;
+  align-items: center;
+}
+
+.txt1{
+  padding-left: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.isi-txt{
+  font-family: candara;
+  color: #ffffff;
+  font-size: 28px;
+  width: 75%;
+  padding-top: 1rem;
+}
+
+/* -------------------------------------------------------- */
+.content2{
+  background-image:url(Asset/Background\ untuk\ agent.png);
+  display: flex;
+  width: 100%;
+  height: 650px;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+
+.text-conten2{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.judul-txt2{
+  font-size: 100px;
+  color: #ffffff;
+  width: 50px;
+}
+
+.isi-txt2{
+  font-family: candara;
+  color: #ffffff;
+  font-size: 25px;
+  width: 90%;
+}
+
+/* -------------------------------------- */
+
+.welcome-button2 {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+  border: none
+}
+
+.welcome-button2 div {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  padding: 15px 0;
+  background: whitesmoke;
+}
+
+.welcome-button2 div::after {
+  content: '';
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: #0f1923;
+  transition: 0.4s;
+}
+
+.welcome-button2:hover div::after {
+  background: #ece8e1;
+}
+
+.welcome-button2 div span {
+  position: absolute;
+  width: 120%;
+  height: 110%;
+  transform: translate(-100%, -20px);
+  background: #0f1923;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+  transition: 0.4s;
+}
+
+.welcome-button2:hover div span {
+  transform: translate(-10%, -20px);
+}
+
+.welcome-button2 div a {
+  position: relative;
+  text-decoration: none;
+  color:black;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 80px;
+}
+
+.welcome-button2 div a:hover{
+  color: white;
+}
+
+.agen-item img{
+  height: 650px;
+  width: 700px;
+  margin-top: -130px;
+}
+
+/* ----------------------------------------------------- */
+
+.content3{
+  display: flex;
+  flex-direction: row;
+  background-color:#312c24;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  /* align-items: center; */
+  /* margin-top: -65px; */
+}
+
+.content3 img{
+  width: 900px;
+  height: 500px;
+}
+
+.txt-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.judul-txt{
+  font-size: 100px;
+  color: #ffffff;
+  padding-top: -30px;
+  padding-bottom: 30px;
+}
+
+.isi-txt3{
+  font-family: candara;
+  color: #ffffff;
+  font-size: 25px;
+  width: 90%;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+#button-last{
+  padding: 30px;
+}
+
+/* -----------FOOTER------------------------ */
+.Footer{
+  width: 100%;
+  height: 300px;
+  /* background-image: url(bbf4f9cd6fbd1b3d.gif); */
+  background-color: rgba(56, 43, 35, 0.637);
+  background-repeat: no-repeat;
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img{
+  padding: 20px 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-img img{
+  width: 110px;
+  height: 80px;
+  padding-left: 18px;
+}
+
+.logo-sosmed{
+  display: flex;
+  flex-direction: row;
+}
+
+.Footer-Logo img{
+  width: 100px;
+  height: 70px;
+  padding: 10px;
+}
+
+.font-unduh{
+  font-family: valorant;
+  color: white;
+  font-size: 20px;
+}
+
+.footer-bottom{
+  display: flex;
+  flex-direction: row;
+}
+
+.font-bottom a{
+  padding: 3px;
+  font-size: 10px;
+  color: white;
+  font-weight: 2px;
+}
+
+.footer-font{
+  font-size: 20px;
+  padding-top: 5px;
+  color:white;
+  text-align: center;
+}
+
+.Footer-Logo img:hover{
+  background-color: white;
+  /* opacity: 50%; */
+  border-radius: 30px;
+  background-size: 30px;
+}
+
+.font-bottom a:hover{
+  opacity: 50%;
+}
+
+@media screen and (max-width: 800px)
+{
+  .judul-header{
+    font-size: 100px;
+  }
+  .Content-Logo{
+    width: 50%;
+    padding-left:50px ;
+    width: 190px;
+  }
+  .content1{
+    flex-direction: column;
+    padding-top: 20%;
+    padding-left: 0;
+  }
+  .judul-txt{
+    font-size: 46px;
+    width: 120%;
+    padding-left: 60px;
+  }
+  .logofix{
+    align-items: center;
+    
+  }
+  .isi-txt{
+    width: 100%; 
+    text-align: justify;
+  }
+  .content2{
+    flex-direction: column;
+    padding-top: 30%;
+  }
+  .welbut{
+    padding-bottom: 30%;
+  }
+  .agen-item{
+    padding-top: 10%;
+    display: none;
+  }
+  .judul-txt2{
+    font-size: 46px;
+    width: 100%;
+    text-align: center;
+  }
+  .isi-txt2{
+    width: 100%;
+    text-align: justify;
+  }
+  .Content-Logo img{
+    width: 180px;
+    height: 180px;
+    
+  }
+  .content3{
+    display: flex;
+    flex-direction: column;
+    background-color:#312c24;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+  }
+  
+  .content3 img{
+    padding: 0;
+    width: 100%;
+    padding-top: -20%;
+    height: 50%;
+   
+  }
+  .isi-txt3{
+    width: 97%;
+    text-align: justify;
+    
+  }
+  #jdltxt{
+    padding-top: 27px;
+    padding-bottom: 2px;
+    padding-left: 250px;
+  }
+  #button-last{
+    padding-left: 33%;
+  }
+}
+/* FOOTER */
+
+
+
